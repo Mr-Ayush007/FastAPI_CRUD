@@ -24,3 +24,14 @@ def data_create(data:user_input):
     data_dict["Price"] = data.Price
     fake_db.append(data_dict)
     return {"message":"Data created successfully!","data":data_dict}
+
+@app.put("/update/{item_in}")
+def update_data(item_in:int,data:user_input):
+    fake_db[item_in]["name"] = data.name
+    fake_db[item_in]["Price"] = data.Price
+    return {"message":"Data Updated Successfully!","data":fake_db}
+
+@app.delete("/remove")
+def deleting_data(item_in:int = 0):
+    fake_db.pop(item_in)
+    return {"message":"Data deleted successfully!","data":fake_db}
