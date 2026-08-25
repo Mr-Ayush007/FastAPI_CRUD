@@ -24,3 +24,4 @@ def data_create(data:user_input):
     data_dict["Price"] = data.Price
     fake_db.append(data_dict)
     return {"message":"Data created successfully!","data":data_dict}
+
