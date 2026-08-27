@@ -34,4 +34,4 @@ def update_data(item_in:int,data:user_input):
 @app.delete("/remove")
 def deleting_data(item_in:int = 0):
     fake_db.pop(item_in)
-    return {"message":"Data deleted 0 0 1 1 1 feature successfully!","data":fake_db}
+    return {"message":"Data deleted 0 0 br successfully!","data":fake_db}
